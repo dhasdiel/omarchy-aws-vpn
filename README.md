@@ -21,9 +21,7 @@ connection with SAML login, for the Omarchy shell.
    [releases](https://github.com/dhasdiel/aws-vpn/releases) for newer tags:
 
    ```sh
-   git clone https://github.com/dhasdiel/aws-vpn ~/aws-vpn \
-     && git -C ~/aws-vpn checkout --detach 8c9c794059c8bc0b42f868cb593ec90a251ff7ff \
-     && cd ~/aws-vpn
+   git clone https://github.com/dhasdiel/aws-vpn ~/aws-vpn && git -C ~/aws-vpn checkout --detach 8c9c794059c8bc0b42f868cb593ec90a251ff7ff && cd ~/aws-vpn
    ./setup.sh <your-profile.ovpn> && ./build.sh && ./install.sh
    ./vpnctl status   # prints "down"
    ```
