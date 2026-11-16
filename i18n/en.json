@@ -1,0 +1,5 @@
+{
+  "tooltip.up": "AWS VPN: connected (click to disconnect)",
+  "tooltip.connecting": "AWS VPN: connecting… (click to cancel)",
+  "tooltip.down": "AWS VPN: off (click to connect)"
+}

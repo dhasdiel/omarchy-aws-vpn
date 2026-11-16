@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.dhasdiel.aws-vpn",
+  "name": "AWS VPN",
+  "version": "1.0.0",
+  "author": "dhasdiel",
+  "license": "MIT",
+  "description": "Bar toggle for an AWS Client VPN (SAML) connection driven by the aws-vpn scripts.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Widget.qml"
+  },
+  "barWidget": {
+    "displayName": "AWS VPN",
+    "description": "Left click: connect or disconnect. Right click: open the VPN log.",
+    "category": "Network",
+    "aliases": ["aws", "vpn", "clientvpn", "saml", "network"],
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
