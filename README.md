@@ -17,11 +17,11 @@ connection with SAML login, for the Omarchy shell.
 ## Install
 
 1. Install the client first and verify it works. The clone checks out a
-   fixed commit (v1.1.1) — see
+   fixed commit (v1.1.2) — see
    [releases](https://github.com/dhasdiel/aws-vpn/releases) for newer tags:
 
    ```sh
-   git clone https://github.com/dhasdiel/aws-vpn ~/aws-vpn && git -C ~/aws-vpn checkout --detach a2fd4ac74586d31de7049c0e8549bf2f1bbb8dd8 && cd ~/aws-vpn
+   git clone https://github.com/dhasdiel/aws-vpn ~/aws-vpn && git -C ~/aws-vpn checkout --detach 0f70529d7da3bd4a57abe7a8d0957b74656d65be && cd ~/aws-vpn
    ./setup.sh <your-profile.ovpn> && ./build.sh && ./install.sh
    ./vpnctl status   # prints "down"
    ```
