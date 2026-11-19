@@ -36,7 +36,7 @@ connection with SAML login, for the Omarchy shell.
 
    ```sh
    git clone https://github.com/dhasdiel/omarchy-aws-vpn /tmp/omarchy-aws-vpn
-   git -C /tmp/omarchy-aws-vpn checkout --detach PINNED_SHA
+   git -C /tmp/omarchy-aws-vpn checkout --detach a61eb115b5a45fdce3e7fe85bdf347935630acb3
    mkdir -p ~/.config/omarchy/plugins/io.github.dhasdiel.aws-vpn
    cp -r /tmp/omarchy-aws-vpn/{manifest.json,Widget.qml,i18n} \
      ~/.config/omarchy/plugins/io.github.dhasdiel.aws-vpn/
