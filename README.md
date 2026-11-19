@@ -17,19 +17,26 @@ connection with SAML login, for the Omarchy shell.
 ## Install
 
 1. Install the client first and verify it works. The clone checks out a
-   fixed commit (v1.1.0) — see
+   fixed commit (v1.1.1) — see
    [releases](https://github.com/dhasdiel/aws-vpn/releases) for newer tags:
 
    ```sh
-   git clone https://github.com/dhasdiel/aws-vpn ~/aws-vpn && git -C ~/aws-vpn checkout --detach 852aa3af6ef608142ca054c021c23cd491836383 && cd ~/aws-vpn
+   git clone https://github.com/dhasdiel/aws-vpn ~/aws-vpn && git -C ~/aws-vpn checkout --detach a2fd4ac74586d31de7049c0e8549bf2f1bbb8dd8 && cd ~/aws-vpn
    ./setup.sh <your-profile.ovpn> && ./build.sh && ./install.sh
    ./vpnctl status   # prints "down"
    ```
 
-2. Install the plugin:
+2. Install the plugin. Once it is listed in the Omarchy marketplace:
+
+   ```sh
+   omarchy plugin add io.github.dhasdiel.aws-vpn --enable
+   ```
+
+   Until then, install manually from a fixed commit:
 
    ```sh
    git clone https://github.com/dhasdiel/omarchy-aws-vpn /tmp/omarchy-aws-vpn
+   git -C /tmp/omarchy-aws-vpn checkout --detach PINNED_SHA
    mkdir -p ~/.config/omarchy/plugins/io.github.dhasdiel.aws-vpn
    cp -r /tmp/omarchy-aws-vpn/{manifest.json,Widget.qml,i18n} \
      ~/.config/omarchy/plugins/io.github.dhasdiel.aws-vpn/

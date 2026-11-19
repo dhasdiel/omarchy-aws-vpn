@@ -63,7 +63,7 @@ BarWidget {
                : strings.t("tooltip.down")
     onPressed: function(b) {
       if (b === Qt.RightButton) {
-        Quickshell.execDetached(["xdg-open", Quickshell.env("XDG_RUNTIME_DIR") + "/aws-vpn/openvpn.log"])
+        Quickshell.execDetached([root.vpnctl, "log"])
         return
       }
       if (toggleProc.running) return
