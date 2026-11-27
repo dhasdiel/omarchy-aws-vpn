@@ -16,12 +16,15 @@ connection with SAML login, for the Omarchy shell.
 
 ## Install
 
-1. Install the client first and verify it works. The clone checks out a
-   fixed commit (v1.1.3) — see
+1. Install the client first and verify it works. Only the fixed commit
+   (v1.1.3) is fetched — no branch tip is ever downloaded — see
    [releases](https://github.com/dhasdiel/aws-vpn/releases) for newer tags:
 
    ```sh
-   git clone https://github.com/dhasdiel/aws-vpn ~/aws-vpn && git -C ~/aws-vpn checkout --detach c9863e28c6c14aa2ad1ea761e5857b77ff7cd3ad && cd ~/aws-vpn
+   git init ~/aws-vpn && cd ~/aws-vpn
+   git remote add origin https://github.com/dhasdiel/aws-vpn
+   git fetch --depth 1 origin c9863e28c6c14aa2ad1ea761e5857b77ff7cd3ad
+   git checkout --detach c9863e28c6c14aa2ad1ea761e5857b77ff7cd3ad
    ./setup.sh <your-profile.ovpn> && ./build.sh && ./install.sh
    ./vpnctl status   # prints "down"
    ```
@@ -35,8 +38,10 @@ connection with SAML login, for the Omarchy shell.
    Until then, install manually from a fixed commit:
 
    ```sh
-   git clone https://github.com/dhasdiel/omarchy-aws-vpn /tmp/omarchy-aws-vpn
-   git -C /tmp/omarchy-aws-vpn checkout --detach a61eb115b5a45fdce3e7fe85bdf347935630acb3
+   git init /tmp/omarchy-aws-vpn && cd /tmp/omarchy-aws-vpn
+   git remote add origin https://github.com/dhasdiel/omarchy-aws-vpn
+   git fetch --depth 1 origin a61eb115b5a45fdce3e7fe85bdf347935630acb3
+   git checkout --detach a61eb115b5a45fdce3e7fe85bdf347935630acb3
    mkdir -p ~/.config/omarchy/plugins/io.github.dhasdiel.aws-vpn
    cp -r /tmp/omarchy-aws-vpn/{manifest.json,Widget.qml,i18n} \
      ~/.config/omarchy/plugins/io.github.dhasdiel.aws-vpn/
